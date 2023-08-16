@@ -10,11 +10,17 @@
     //Apresente a lista final de cada tipo de veículo.
 
     //ENTRADA
-
-
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let carrosHatch = ["308", "Focus", "i30"];
+    const novocarro1 = prompt('Informe um carro sedan para adicionar')
+    const novocarro2 = prompt('Informe um carro hatch para adicionar')
+    const novocarro3 = prompt('Informe um carro SUV para adicionar')
     //PROCESSAMENTO
-
-
+    carrosSedan.push(novocarro1)
+    carrosHatch.push(novocarro2)
+    carrosSUV.push(novocarro3)
+    alert(`Lista dos sedan: ${carrosSedan.join(", ")}\nLista dos SUV ${carrosSUV.join(", ")}\nLista dos hatch ${carrosHatch.join(", ")}`)
     //SAÍDA
 
 </script>

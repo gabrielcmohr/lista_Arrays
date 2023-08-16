@@ -4,28 +4,30 @@
     //Retorne os elementos do array, separando-os por hífen (n1 - n2 - n3).
 
     //ENTRADA
-    const num1 = Number(prompt("Informe um número:"));
-    const num2 = Number(prompt("Informe outro número:"));
-    const num3 = Number(prompt("Informe outro número:"));
-
+    const num1 = Number(prompt('Informe um número inteiro'))
+    const num2 = Number(prompt('Informe um outro número inteiro'))
+    const num3 = Number(prompt('INforme um outro número'))
     //PROCESSAMENTO
-    let num = [];
-
-    if (num1 < num2 && num2 < num3) {
-        num = [num3, num2, num1];
+    let arrayvazio
+    if (num1 > num2 && num1 > num3 && num2 > num3 ) {
+        arrayvazio = [num1, num2, num3]
     }
-    else if (num2 < num1 && num1 < num3) {
-        num = [num3, num2, num1];
+    else if (num1 > num2 && num1 > num3 && num3 > num2) {
+        arrayvazio = [num1, num3, num2 ]
     }
-    else if (num3 < num1 && num1 < num2) {
-        num = [num3, num2, num1];
+    else if (num2 > num1 && num2 > num3 && num1 > num3) {
+        arrayvazio = [num2, num1, num3]
+    }
+    else if(num2 > num1 && num2 > num3 && num3 > num1) {
+        arrayvazio = [num2, num3, num1]
+    }
+    else if(num3 > num2 && num3 > num1 && num2 > num1) {
+        arrayvazio = [num3, num2, num1]
     }
     else {
-        num = [num3, num2, num1];
+        arrayvazio = [num3, num1, num2]
     }
-    alert(num.join(" - "))
-
-
     //SAÍDA
+    alert(`As arrays são: ${arrayvazio.join (" - ")}`)
 
 </script>
